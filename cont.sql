@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS bag;
+USE bag;
+
+CREATE TABLE IF NOT EXISTS contact_form_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    message TEXT NOT NULL,
+    submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

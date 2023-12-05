@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag Shop Management</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #bad1ff;
+        }
+
+        header {
+            background: #7FB5CA;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            border-bottom: 5px solid #FF66FF;
+        }
+
+        section {
+            text-align: center;
+            padding: 40px;
+            color: #555;
+        }
+
+        .profile-image {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .profile-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8),
+                        0 0 20px rgba(0, 255, 0, 0.8),
+                        0 0 20px rgba(0, 0, 255, 0.8);
+            animation: glow 3s infinite;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .glow-text {
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #E0FF99;
+            text-shadow: 0 0 5px rgba(255, 204, 102, 0.8),
+                        0 0 10px rgba(255, 204, 102, 0.8),
+                        0 0 15px rgba(255, 204, 102, 0.8);
+            animation: glow 3s infinite;
+        }
+               
+
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.8),
+                            0 0 20px rgba(0, 255, 0, 0.8),
+                            0 0 20px rgba(0, 0, 255, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.8),
+                            0 0 20px rgba(0, 255, 0, 0.8),
+                            0 0 20px rgba(0, 0, 255, 0.8);
+            }
+        }
+
+.back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #ff00cc, #00ccff, #ccff00, #ff00cc);
+            background-size: 400% 400%;
+            animation: gradientFlow 5s ease infinite;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .back-button:hover {
+            animation: gradientFlow 5s ease infinite, glow 1s ease-in-out infinite;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+      Rajesh's Lux Bags 
+    </header>
+
+    <section>
+        <div class="profile-image">
+            <img src="ceo.jpg" alt="Luxury Bags">
+        </div>
+        <p>Welcome to Rajesh's Lux Bags, where subtlety meets sophistication. Our curated collection is a seamless blend of timeless designs and contemporary sophistication, offering you a selection that transcends traditional fashion trends.</p>
+        
+        <p>Indulge in the luxury of choice as you explore our handpicked selection of bags, each meticulously crafted to be a subtle expression of your unique style. At Rajesh's Lux Bags, we believe that a well-chosen bag is not just an accessory; it's a personal statement, reflecting your individuality.</p>
+
+        <p>Embark on this enchanting journey where passion for fashion intertwines with the art of accessorizing. Let your style gently radiate with Rajesh's Lux Bags - where every bag tells a story, and yours is poised to be unveiled.</p>
+
+        <p class="glow-text">Discover Subtle Luxury with Rajesh's Lux Bags.</p>
+    </section>
+<br>
+<br>
+<br>
+<br>
+<div class="back-button" onclick="goToMain()">
+        Click Me to Go Back
+    </div>
+
+    <script>
+        function goToMain() {
+            // Redirect to main.html
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

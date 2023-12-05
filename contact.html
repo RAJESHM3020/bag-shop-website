@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fceabb, #fccd4d);
+            overflow: hidden;
+        }
+
+        header {
+            background-color:  #9DE0A1;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .contact-form {
+            background-color:  #bfffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 70%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+     
+
+        @keyframes lights {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(0);
+                opacity: 1;
+            }
+        }
+
+        .contact-form:hover {
+            transform: scale(1.05);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.8),
+                        0 0 20px rgba(0, 255, 0, 0.8),
+                        0 0 30px rgba(0, 0, 255, 0.8);
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #ff00cc, #00ccff, #ccff00);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #ff00cc, #00ccff, #ccff00);
+            background-size: 200% 200%;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #fff;
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.2em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #ff4500;
+        }
+
+
+
+.back-button {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 5px;
+            background: linear-gradient(45deg, #ff00cc, #00ccff, #ccff00, #ff00cc);
+            background-size: 400% 400%;
+            animation: gradientFlow 5s ease infinite;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align:left;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .back-button:hover {
+            animation: gradientFlow 5s ease infinite, glow 1s ease-in-out infinite;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <u><h1>Contact Us</h1></u>
+    </header>
+
+    <section>
+        <div class="contact-form">
+            <div class="glow"></div>
+            <div class="glow"></div>
+            <div class="glow"></div>
+            <form action="magic.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="tel">Phone Number:</label>
+                <input type="tel" id="tel" name="tel" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="back-button" onclick="goToMain()">
+        Click Me to Go Back
+    </div>
+
+    <script>
+        function goToMain() {
+            // Redirect to main.html
+            window.location.href = 'index.html';
+        }
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag Shop Management</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f4f4f4, #ddd);
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+header h1 {
+            margin: 0;
+        }
+
+        .header-links {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+        }
+
+        .header-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 2.2em;
+        }
+
+
+
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .bag {
+            width: calc(33.33% - 40px);
+            margin: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            animation: glow 2s infinite; /* Apply glowing effect */
+        }
+
+        .bag img {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .bag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .bag:hover img {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #fff;
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.2em; 
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #ff4500; /* Change to your desired hover color */
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.8),
+                            0 0 20px rgba(0, 255, 0, 0.8),
+                            0 0 30px rgba(0, 0, 255, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.8),
+                            0 0 30px rgba(0, 255, 0, 0.8),
+                            0 0 40px rgba(0, 0, 255, 0.8);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Rajesh's Lux Bag's</h1>
+       <div class="header-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+    </header>
+
+    <section>
+        <div class="bag">
+            <img src="two.jpg" alt="Bag 1">
+            <h2>Bag 1</h2>
+            <p><h3>Elegant and sophisticated, Bag 1 is crafted with premium materials to provide a stylish and functional accessory. With ample space and modern design, it's perfect for both work and casual outings</h3></p>
+        </div>
+
+        <div class="bag">
+            <img src="three.jpg" alt="Bag 2">
+            <h2>Bag 2</h2>
+            <p><h3>Bag 2 is a versatile companion for your daily adventures. Its durable construction and trendy look make it a must-have. Stay organized with multiple compartments while showcasing your fashion-forward sense.</h3></p>
+        </div>
+     	
+	<div class="bag">
+            <img src="nine.jpg" alt="Bag 2">
+            <h2>Bag 3</h2>
+            <p><h3>Introducing Bag 3, a chic and compact choice for those who value simplicity and elegance. This bag seamlessly combines practicality with a touch of glamour, making it an ideal choice for any occasion.</h3></p>
+        </div>
+
+	<div class="bag">
+            <img src="five.jpg" alt="Bag 2">
+            <h2>Bag 4</h2>
+            <p><h3> Make a statement with Bag 4, a bold and edgy accessory designed for trendsetters. The unique design and vibrant colors set you apart from the crowd, while the spacious interior keeps your essentials organized.</h3></p>
+        </div>
+
+
+	<div class="bag">
+            <img src="six.jpg" alt="Bag 2">
+            <h2>Bag 5</h2>
+            <p><h3>Elevate your style with Bag 5, a timeless classic with a modern twist. The sleek lines and high-quality craftsmanship make it a go-to option for individuals who appreciate both fashion and functionality.</h3></p>
+        </div>
+
+
+	<div class="bag">
+            <img src="seve.jpg" alt="Bag 2">
+            <h2>Bag 6</h2>
+            <p><h3>Discover the allure of Bag 6, a fusion of traditional charm and contemporary flair. Its intricate details and rich textures make it an eye-catching accessory that complements any outfit.</h3></p>
+        </div>
+
+	<div class="bag">
+            <img src="eight.jpg" alt="Bag 2">
+            <h2>Bag 7</h2>
+            <p><h3>Unleash your adventurous side with Bag 7, a rugged and durable companion for those always on the move. Whether you're exploring the city or embarking on a weekend getaway, this bag is up for the challenge.</h3></p>
+        </div>
+	
+	<div class="bag">
+            <img src="four.jpg" alt="Bag 2">
+            <h2>Bag 8</h2>
+            <p><h3> Embrace sophistication with Bag 8, a refined accessory that exudes timeless elegance. The minimalist design and premium materials make it a perfect choice for individuals who appreciate understated luxury.</h3></p>
+        </div>
+        <!-- Add more bag divs as needed -->
+
+    </section>
+
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('footer a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+
+</body>
+</html>
